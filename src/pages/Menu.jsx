@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import VistarakuPlate from '../components/VistarakuPlate';
+import ScrollMenu from '../components/ScrollMenu';
 
 function Menu() {
   const [activeCategory, setActiveCategory] = useState('chinese_nonveg_sig');
@@ -18,7 +18,7 @@ function Menu() {
           </p>
         </div>
 
-        <VistarakuPlate
+        <ScrollMenu
           activeCategory={activeCategory}
           onCategoryChange={setActiveCategory}
         />

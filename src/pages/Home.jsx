@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import VistarakuPlate from '../components/VistarakuPlate';
+import ScrollMenu from '../components/ScrollMenu';
 
 function Home() {
   const [activeCategory, setActiveCategory] = useState('chinese_nonveg_sig');
@@ -72,7 +72,7 @@ function Home() {
             </h2>
           </div>
 
-          <VistarakuPlate
+          <ScrollMenu
             activeCategory={activeCategory}
             onCategoryChange={setActiveCategory}
           />
