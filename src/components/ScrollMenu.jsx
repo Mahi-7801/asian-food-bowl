@@ -28,6 +28,7 @@ function ScrollMenu({ activeCategory, onCategoryChange }) {
   };
 
   const activeItems = menuData[activeCategory]?.items || [];
+  const activeTitle = menuData[activeCategory]?.title || '';
 
   return (
     <div className="scroll-menu-container">
@@ -48,6 +49,33 @@ function ScrollMenu({ activeCategory, onCategoryChange }) {
       <div className="scroll-paper-wrapper">
         <div className="scroll-roller-top"></div>
         <div className="scroll-paper-body">
+          {/* Title inside the scroll */}
+          <div style={{
+            textAlign: 'center',
+            marginBottom: '20px',
+            borderBottom: '2px solid rgba(0,0,0,0.1)',
+            paddingBottom: '14px'
+          }}>
+            <div style={{
+              fontFamily: 'var(--font-serif)',
+              fontSize: '1.3rem',
+              fontWeight: '800',
+              color: '#3d2b1f',
+              letterSpacing: '0.5px'
+            }}>
+              🍃 {activeTitle}
+            </div>
+            <div style={{
+              fontSize: '0.75rem',
+              color: '#8b6f5e',
+              marginTop: '4px',
+              letterSpacing: '1px',
+              textTransform: 'uppercase'
+            }}>
+              Asian Food Bowl Restaurant
+            </div>
+          </div>
+
           <div
             ref={menuScrollRef}
             className="scroll-content"
